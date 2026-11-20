@@ -1,12 +1,12 @@
 import { countriesApi } from '../api'
 
 export async function fetchCountries() {
-  const { data } = await countriesApi.get('/')
+  const { data } = await countriesApi.get('')
   return data
 }
 
 export async function searchCountries(query) {
-  const { data } = await countriesApi.get('/', { params: { q: query } })
+  const { data } = await countriesApi.get('', { params: { q: query } })
   return data
 }
 
