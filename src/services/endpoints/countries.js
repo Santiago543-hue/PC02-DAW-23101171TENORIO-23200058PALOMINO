@@ -5,8 +5,8 @@ export async function fetchCountries() {
   return data
 }
 
-export async function searchCountriesByCapital(query) {
-  const { data } = await countriesApi.get('/capitals', { params: { q: query } })
+export async function searchCountries(query) {
+  const { data } = await countriesApi.get('/', { params: { q: query } })
   return data
 }
 

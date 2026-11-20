@@ -3,7 +3,7 @@ import {
   fetchCountries as requestCountries,
   fetchCountriesByRegion,
   fetchCountryByAlpha2,
-  searchCountriesByCapital,
+  searchCountries,
 } from '../services/endpoints/countries'
 import { mapCountries } from '../utils/mapCountry'
 
@@ -51,7 +51,7 @@ export function useCountries() {
 
       let payload
       if (query) {
-        payload = await searchCountriesByCapital(query)
+        payload = await searchCountries(query)
       } else if (continent) {
         const apiRegion = continent === 'Europa' ? 'Europe'
           : continent === 'Asia' ? 'Asia'
