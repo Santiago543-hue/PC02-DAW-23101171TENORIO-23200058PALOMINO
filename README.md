@@ -37,6 +37,7 @@ npm run build
 - `src/composables/`: estado y caché en memoria para países y monedas.
 - `src/services/api.js`: instancias Axios autenticadas `countriesApi` y `currenciesApi`.
 - `src/services/endpoints/`: funciones de acceso por API.
+- La búsqueda usa `GET /countries/v5?q={texto}` con `Authorization: Bearer <API key>`.
 - `src/router/index.js`: listado en `/` y detalle en `/country/:code`.
 - `src/utils/mapCountry.js`: normalización de campos de REST Countries.
 
